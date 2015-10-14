@@ -38,6 +38,68 @@ video {
 
 /* Mobile Layout: 480px and below. */
 
+    a, a:hover, a:visited, a:active {
+      color: blue;
+    }
+    p {
+      line-height: 1.4;
+      margin: 10px 0;
+    }
+    .strike {
+      color: red;
+      text-decoration: line-through;
+    }
+    .ninja {
+      color: red;
+      font-weight: bold;
+    }
+    .gridContainer {
+      position: relative;
+    }
+    #ninjaman {
+      position: fixed;
+      width: 180px;
+      height: 120px;
+      background: url(images/blninja_rev.png) no-repeat 0 0 transparent;
+      display: block;
+      z-index: 2;
+      right: 0;
+      top: 0;
+    }
+    .header {
+      font-size:70px;
+      line-height: 1;
+      letter-spacing: -1px;
+      margin: 10px 0;
+    }
+    .second-header {
+      font-size:28px;
+      line-height: 1;
+      text-transform: uppercase;
+      margin: 10px 0;
+    }
+    #LayoutDiv1 {
+      padding-bottom: 40px;
+    }
+    #small-map {
+      max-width: 300px;
+      width: 100%;
+      cursor: pointer;
+    }
+    #big-map {
+        position: fixed;
+        display: none;
+        z-index: 3;
+        width: 800px;
+        height: 320px;
+        margin-left: -325px;
+        margin-top: -142px;
+        left: 50%;
+        top: 50%;
+        cursor: pointer;
+        box-shadow: 4px 4px 4px 0 #333;
+    }
+
 .gridContainer {
     margin-left: auto;
     margin-right: auto;

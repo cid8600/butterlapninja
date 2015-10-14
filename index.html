@@ -1,71 +1,19 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Butterlap Ninja</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
   <meta property="og:title" content="Butterlap Nimja: A FAST weekly bike ride through SF" />
   <meta property="og:description" content="Meet at the Ferry Building every Wed @ 7pm. Come to ride, ride faster and have fun!" />
   <meta property="og:url" content="http://www.butterlap.ninja" />
   <meta property="og:image" content="http://www.butterlap.com/map.png" />
 
-  <title>Butterlap.ninja: A fast weekly bike ride through SF</title>
-
   <link href="boilerplate.css" rel="stylesheet" type="text/css">
   <link href="style.css" rel="stylesheet" type="text/css">
-
-  <script src="respond.min.js"></script>
-
-
-  <style>
-    a, a:hover, a:visited, a:active {
-      color: blue;
-    }
-    p {
-      line-height: 1.4;
-      margin: 5px 0;
-    }
-    .strike {
-      color: red;
-      text-decoration: line-through;
-    }
-    .ninja {
-      color: red;
-    }
-    .gridContainer {
-      position: relative;
-    }
-    #ninjaman {
-      position: fixed;
-      width: 180px;
-      height: 120px;
-      background: url(images/blninja_rev.png) no-repeat 0 0 transparent;
-      display: block;
-      z-index: 2;
-      right: 0;
-      top: 0;
-    }
-    .header {
-      font-size:70px;
-      line-height: 1;
-      letter-spacing: -1px;
-      margin: 10px 0;
-    }
-    .second-header {
-      font-size:28px;
-      line-height: 1;
-      text-transform: uppercase;
-      margin: 10px 0;
-    }
-    #LayoutDiv1 {
-      padding-bottom: 40px;
-    }
-    .map {
-      max-width: 400px;
-      width: 100%;
-    }
-  </style>
-
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 <body>
   <div class="gridContainer clearfix">
@@ -73,7 +21,8 @@
     <div id="LayoutDiv1">
 
       <div class="ninja header">Butterlap Ninja</div>
-      <p><i>A weekly bike ride through San Francisco... in reverse.</i>
+      <p><i>A weekly bike ride through San Francisco... in reverse.</i></p>
+      <p>
       <br>Come to <span class="strike">socialize</span> ride, <span class="strike">exercise</span> ride faster and <span class="strike">have fun</span> no, wait... yes, have fun!
       </p>
       <p>
@@ -90,13 +39,14 @@
         <b>Stop 2</b>: Bender's Bar and Grill (Great food and Whiskey Wednesdays!)
       </p>
       <p>
-        <img src="images/map.jpg" class="map"/>
-        <br><a href="http://www.mapmyride.com/us/san-francisco-ca/butterlap-route-145587815">More route information</a>
+        <img src="images/map.jpg" id="small-map"/>
+        <img src="images/map-elevate-large.jpg" id="big-map"/>
+        <br><a href="https://connect.garmin.com/modern/course/create-from-activity/924217811">More route information -- Not perfect</a>
       </p>
 
       <div id="FAQ" class="second-header">Frequently Asked Questions</div>
 
-      <p><b>How many people usually come?</b> (1 - ?). The Butterlap Ninja ride welcomes everyone that wants to kick their OG Butterlap ride up a notch. <span class="ninja">This is an advanced paced ride.</span></p>
+      <p><b>How many people usually come?</b> (1 - ?). The Butterlap Ninja ride welcomes everyone that wants to kick their OG Butterlap ride up a notch. <br><span class="ninja">This is an advanced paced ride.</span></p>
 
       <p><b>What kind of people come to the Butterlap Ninja ride?</b> The same people that rock the OG Butterlap... awesome, caring, fabulous bike-people!</p>
 
@@ -115,5 +65,20 @@
       <p><b>Is there an awesome video I can watch?</b> No. But there may be someday if you can catch us ;-)</p>
     </div>
   </div>
+  <script>
+  $(function () {
+
+    $('#small-map').on('click', function(e) {
+      e.stopPropagation();
+      $('#big-map').fadeIn(400);
+    });
+
+    $('body').on('click', function(e) {
+        if ($('#big-map').css('display') === 'block') {
+          $('#big-map').fadeOut(400);
+        }
+    });
+  })
+  </script>
 </body>
 </html>
