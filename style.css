@@ -90,12 +90,10 @@ video {
         position: fixed;
         display: none;
         z-index: 3;
-        width: 800px;
-        height: 320px;
-        margin-left: -325px;
-        margin-top: -142px;
-        left: 50%;
-        top: 50%;
+        width: 100%;
+        height: auto;
+        left: 0;
+        top: 10px;
         cursor: pointer;
         box-shadow: 4px 4px 4px 0 #333;
     }
