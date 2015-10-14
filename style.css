@@ -64,7 +64,7 @@ video {
       display: block;
       z-index: 2;
       right: 0;
-      top: 0;
+      top: -120px;
     }
     .header {
       font-size:70px;
