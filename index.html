@@ -66,25 +66,24 @@
     </div>
   </div>
   <script>
-  $(function () {
+    $(function () {
 
-    $('#small-map').on('click', function(e) {
-      e.stopPropagation();
-      $('#big-map').fadeIn(400);
+      $('#small-map').on('click', function(e) {
+        e.stopPropagation();
+        $('#big-map').fadeIn(400);
+      });
+
+      $('body').on('click', function(e) {
+          if ($('#big-map').css('display') === 'block') {
+            $('#big-map').fadeOut(400);
+          }
+      });
+
+      $('#ninjaman').animate({
+        top: '0'
+        }, 2000, function () {
+      });
     });
-
-    $('body').on('click', function(e) {
-        if ($('#big-map').css('display') === 'block') {
-          $('#big-map').fadeOut(400);
-        }
-    });
-
-    $('#ninjaman').animate({
-      top: "0"
-      }, 2000, function() {
-
-    });
-  });
   </script>
 </body>
 </html>

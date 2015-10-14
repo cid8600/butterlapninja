@@ -63,7 +63,7 @@ video {
       background: url(images/blninja_rev.png) no-repeat 0 0 transparent;
       display: block;
       z-index: 2;
-      right: 0;
+      right: 10%;
       top: -120px;
     }
     .header {
