@@ -1,9 +1,11 @@
 @charset "utf-8";
-
 body {
-  font-size: 62.5%;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 62.5%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
 }
+
+
 /* Simple fluid media
    Note: Fluid media requires that you remove the media's height and width attributes from the HTML
    http://www.alistapart.com/articles/fluid-images/
@@ -16,102 +18,124 @@ video {
     max-width: 100%;
 }
 
-    a {
-      color: #73ae0b;
-      text-decoration: none;
-    }
-    a:hover, a:visited, a:active {
-      color: #5e9308;
-      text-decoration: underline;
-    }
+a {
+    color: #73ae0b;
+    text-decoration: none;
+}
 
-    .garmin {
-      width: 465px;
-      height: 500px;
-      box-sizing: border-box;
-      display: block;
-      margin: 0 auto;
-    }
-  ul {
+a:hover,
+a:visited,
+a:active {
+    color: #5e9308;
+    text-decoration: underline;
+}
+
+.garmin {
+    width: 465px;
+    height: 500px;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+}
+
+ul {
     list-style: none;
     padding: 0;
     margin: 0;
-  }
-    p, ul >li {
-      line-height: 1.2;
-      margin: 10px 0;
-      font-size: 1rem;
-    }
+}
 
-    .strike {
-      color: red;
-      text-decoration: line-through;
-    }
-    .ninja {
-      color: red;
-      font-weight: bold;
-    }
-    .gridContainer {
-      position: relative;
-    }
-    #ninjaman {
-      position: fixed;
-      width: 180px;
-      height: 120px;
-      background: url(images/blninja_rev.png) no-repeat 0 0 transparent;
-      display: block;
-      z-index: 2;
-      right: 10%;
-      top: -120px;
-    }
-    .header, h1 {
-      font-size:70px;
-      line-height: 1;
-      letter-spacing: -1px;
-      margin: 40px 0 10px 0;
-      text-align: center;
-    }
-    .header + p {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .second-header, h2 {
-      font-size:28px;
-      line-height: 1.1;
-      text-transform: uppercase;
-      margin: 30px 0 20px 0;
-      padding-top: 20px;
-      border-top: 1px solid #eee;
-      text-align: center;
-    }
+p,
+ul >li {
+    line-height: 1.2;
+    margin: 15px 0;
+    font-size: 1rem;
+}
 
-    h2.left-align {
-      text-align: left;
-    }
-    iframe + p {
-      text-align: center;
-    }
-    #LayoutDiv1 {
-      padding-bottom: 40px;
-    }
-    #small-map {
-      width: 90%;
-      background-color: #eee;
-      padding: 10px;
-      box-sizing: border-box;
-      margin: 0 auto;
-      display: block;
-    }
-    #big-map {
-        position: fixed;
-        display: none;
-        z-index: 3;
-        width: 100%;
-        height: auto;
-        left: 0;
-        top: 10px;
-        box-shadow: 4px 4px 4px 0 #333;
-    }
+.red {
+  color: red;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+.ninja {
+    color: red;
+    font-weight: bold;
+}
+
+.gridContainer {
+    position: relative;
+}
+
+#ninjaman {
+    position: fixed;
+    width: 180px;
+    height: 120px;
+    background: url(images/blninja_rev.png) no-repeat 0 0 transparent;
+    display: block;
+    z-index: 2;
+    right: 10%;
+    top: -120px;
+}
+
+.header,
+h1 {
+    font-size: 70px;
+    line-height: 1;
+    letter-spacing: -1px;
+    margin: 40px 0 10px 0;
+    text-align: center;
+    color: #333;
+}
+
+.header + p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.second-header,
+h2 {
+    font-size: 28px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin: 30px 0 20px 0;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+h2.left-align {
+    text-align: left;
+}
+
+iframe + p {
+    text-align: center;
+}
+
+#LayoutDiv1 {
+    padding-bottom: 40px;
+}
+
+#small-map {
+    width: 90%;
+    background-color: #eee;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: block;
+}
+
+#big-map {
+    position: fixed;
+    display: none;
+    z-index: 3;
+    width: 100%;
+    height: auto;
+    left: 0;
+    top: 10px;
+    box-shadow: 4px 4px 4px 0 #333;
+}
 
 .gridContainer {
     margin-left: auto;
@@ -124,17 +148,26 @@ video {
 }
 
 #LayoutDiv1 {
-    clear: both;
-    float: left;
-    margin-left: 0;
     width: 100%;
     display: block;
 }
 
-#LayoutDiv2 {
-    clear: both;
-    float: left;
-    margin-left: 0;
-    width: 100%;
-    display: block;
+@media (max-width: 480px) {
+  h1 {
+    line-height: .9;
+  }
+  .header + p {
+    margin-top: 40px;
+    padding: 0 30px;
+  }
+  h2 {
+    padding-top: 40px;
+  }
+  .garmin {
+    width: 90%;
+  }
+  iframe + p {
+    padding: 30px;
+  }
 }
+
