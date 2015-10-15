@@ -16,12 +16,17 @@ video {
     max-width: 100%;
 }
 
-    a, a:hover, a:visited, a:active {
-      color: blue;
+    a {
+      color: #73ae0b;
+      text-decoration: none;
+    }
+    a:hover, a:visited, a:active {
+      color: #5e9308;
+      text-decoration: underline;
     }
 
     .garmin {
-      width: 90%;
+      width: 465px;
       height: 500px;
       box-sizing: border-box;
       display: block;
@@ -63,13 +68,18 @@ video {
       font-size:70px;
       line-height: 1;
       letter-spacing: -1px;
-      margin: 10px 0;
+      margin: 40px 0 10px 0;
+      text-align: center;
+    }
+    .header + p {
+      text-align: center;
+      margin-bottom: 40px;
     }
     .second-header, h2 {
       font-size:28px;
       line-height: 1.1;
       text-transform: uppercase;
-      margin: 20px 0;
+      margin: 30px 0 20px 0;
       padding-top: 20px;
       border-top: 1px solid #eee;
       text-align: center;
@@ -78,12 +88,14 @@ video {
     h2.left-align {
       text-align: left;
     }
+    iframe + p {
+      text-align: center;
+    }
     #LayoutDiv1 {
       padding-bottom: 40px;
     }
     #small-map {
       width: 90%;
-      cursor: pointer;
       background-color: #eee;
       padding: 10px;
       box-sizing: border-box;
@@ -98,7 +110,6 @@ video {
         height: auto;
         left: 0;
         top: 10px;
-        cursor: pointer;
         box-shadow: 4px 4px 4px 0 #333;
     }
 
