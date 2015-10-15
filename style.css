@@ -3,6 +3,9 @@ body {
     font-size: 62.5%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
+    background-color: #fefefe;
+    overflow: hidden;
+    width: 100%;
 }
 
 
@@ -114,7 +117,19 @@ iframe + p {
 }
 
 #LayoutDiv1 {
-    padding-bottom: 40px;
+    width: 100%;
+    display: block;
+    padding: 0 0 40px 0;
+    box-sizing: border-box;
+}
+#LayoutDiv1 > * {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#LayoutDiv1 > iframe {
+  padding: 0;
+  margin: 0 auto;
 }
 
 #small-map {
@@ -147,12 +162,12 @@ iframe + p {
     box-sizing: border-box;
 }
 
-#LayoutDiv1 {
-    width: 100%;
-    display: block;
-}
-
 @media (max-width: 480px) {
+  p {
+    line-height: 1.2;
+    margin: 15px 0;
+    font-size: 1.4rem;
+  }
   h1 {
     line-height: .9;
   }
@@ -164,7 +179,8 @@ iframe + p {
     padding-top: 40px;
   }
   .garmin {
-    width: 90%;
+    width: 100vw !important;
+    float: left;
   }
   iframe + p {
     padding: 30px;
