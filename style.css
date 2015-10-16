@@ -187,3 +187,6 @@ iframe + p {
   }
 }
 
+#LayoutDiv1 p.example {
+    text-align: center;
+}
